@@ -1,154 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sipxi Portfolio</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Anime.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.0/gsap.min.js"></script>
-  
-  <!-- Typed.js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  
-  <!-- ScrollReveal -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  
-  <!-- Particles.js -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.6.1/tsparticles.min.js"></script>
-  
-  <!-- GLightbox -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0f172a;
-      color: #f1f5f9;
-    }
-    #hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .project-card {
-      background-color: #1e293b;
-      padding: 1rem;
-      border-radius: 1rem;
-      transition: transform 0.3s;
-    }
-    .project-card:hover {
-      transform: translateY(-10px);
-    }
-    #particles-js {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-  </style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="bg-black text-white font-[Poppins] overflow-x-hidden relative">
+
+  <!-- Particles Background -->
+  <div id="particles-js" class="fixed inset-0 -z-10"></div>
+
+  <!-- Header -->
+  <header class="p-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold font-[Lora]">Sipxi</h1>
+    <nav>
+      <ul class="flex gap-6">
+        <li><a href="#about" class="hover:text-purple-400 transition">About</a></li>
+        <li><a href="#projects" class="hover:text-purple-400 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-purple-400 transition">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Hero Section -->
-  <section id="hero">
-    <div id="particles-js"></div>
-    <h1 id="logo" class="text-5xl font-bold mb-4">Sipxi</h1>
-    <span id="typed" class="text-xl text-teal-400"></span>
+  <section class="h-screen flex flex-col justify-center items-center text-center px-6">
+    <h2 class="text-5xl md:text-6xl font-bold animate__animated animate__fadeInDown font-[Lora]">
+      Hey, I'm Serhij Čepil aka Sipxi
+    </h2>
+    <p class="text-xl md:text-2xl mt-4 animate__animated animate__fadeInUp animate__delay-1s text-gray-300">
+      Passionate about programming and web development.
+    </p>
+    <a href="#projects" class="mt-6 px-8 py-3 bg-purple-600 rounded-lg hover:bg-purple-500 transition font-semibold">
+      See My Work
+    </a>
   </section>
 
-  <!-- About Me -->
-  <section id="about" class="py-20 px-8">
-    <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
-    <div class="max-w-4xl mx-auto space-y-6">
-      <p class="sr-item">I am a student passionate about programming, C#, Python, and creating cool web stuff.</p>
-      <p class="sr-item">I enjoy making interactive portfolios and learning new technologies to push my skills further.</p>
+  <!-- About Section -->
+  <section id="about"
+    class="min-h-screen px-6 md:px-12 py-16 flex flex-col justify-center bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden"
+    data-aos="fade-up">
+
+    <h2 class="text-5xl md:text-6xl font-extrabold mb-12 text-purple-400 drop-shadow-lg tracking-wide font-[Lora]">
+      About Me
+    </h2>
+
+    <p class="text-lg md:text-xl max-w-3xl leading-relaxed text-gray-300 mb-6">
+      Hi, I’m <span class="text-purple-400 font-semibold">Serhij Čepil (Sipxi)</span> — a curious and driven web &
+      software enthusiast passionate about creating engaging, modern, and functional applications.
+      Currently, I’m a second-year IT student at <span class="text-purple-400 font-semibold">VUT FIT</span>, diving deep
+      into <span class="text-purple-400 font-semibold">C# backend development</span> while exploring
+      <span class="text-purple-400 font-semibold">Python</span>, <span
+        class="text-purple-400 font-semibold">ASP.NET</span>,
+      and the latest tech frameworks.
+    </p>
+
+    <p class="text-lg md:text-xl max-w-3xl leading-relaxed text-gray-300 mb-6">
+      I thrive on challenges that push me to experiment with new technologies and creative solutions. Every project I
+      work on combines <span class="text-purple-400 font-semibold">functionality, clean design, and interactivity</span>
+      — because I believe software should be both powerful and enjoyable to use.
+    </p>
+
+    <p class="text-lg md:text-xl max-w-3xl leading-relaxed text-gray-300 mb-6">
+      Beyond coding, I’m constantly exploring new tools, improving my skills, and finding inspiration in innovative
+      tech. My goal is to craft projects that leave a lasting impression while demonstrating curiosity, creativity, and
+      technical expertise.
+    </p>
+
+    <p class="text-lg md:text-xl max-w-3xl leading-relaxed text-gray-300">
+      Interested?
+
+      Feel free to connect with me on <a href="https://github.com/Sipxi"
+        class="text-purple-400 underline hover:text-purple-500 transition">GitHub</a>
+      or via email: <a href="mailto:your.email@example.com"
+        class="text-purple-400 underline hover:text-purple-500 transition">
+        sipxi@email.cz
+      </a>
+    </p>
+
+    </p>
+  </section>
+
+  <!-- Tech Skills Section -->
+  <section id="tech-skills"
+    class="min-h-screen px-6 md:px-12 py-16 flex flex-col justify-center relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-8 font-[Lora] text-purple-400">Tech Skills</h2>
+
+    <div class="flex gap-6 overflow-x-auto py-6 scrollbar-hide">
+      <!-- C# -->
+      <div
+        class="flex-shrink-0 w-48 bg-gray-800 rounded-lg p-4 flex flex-col justify-start items-center hover:scale-105 transition transform">
+        <img src="assets/csharp.png" alt="C#" class="w-16 h-16 mb-3">
+        <h3 class="text-xl font-semibold text-purple-400 mb-2">C# / ASP.NET Core</h3>
+        <ul class="text-gray-300 text-sm list-disc list-inside">
+          <li>.NET 9</li>
+          <li>HTTP & Middleware Pipeline</li>
+          <li>Minimal API</li>
+        </ul>
+      </div>
+
+      <!-- SQL -->
+      <div
+        class="flex-shrink-0 w-48 bg-gray-800 rounded-lg p-4 flex flex-col justify-start items-center hover:scale-105 transition transform">
+        <img src="assets/sql.png" alt="SQL" class="w-16 h-16 mb-3">
+        <h3 class="text-xl font-semibold text-purple-400 mb-2">SQL</h3>
+        <ul class="text-gray-300 text-sm list-disc list-inside">
+          <li>MS SQL, SSMS</li>
+          <li>DDL & DML</li>
+          <li>Querying & programming</li>
+        </ul>
+      </div>
+
+      <!-- Python -->
+      <div
+        class="flex-shrink-0 w-48 bg-gray-800 rounded-lg p-4 flex flex-col justify-start items-center hover:scale-105 transition transform">
+        <img src="assets/python.png" alt="Python" class="w-16 h-16 mb-3">
+        <h3 class="text-xl font-semibold text-purple-400 mb-2">Python</h3>
+        <ul class="text-gray-300 text-sm list-disc list-inside">
+          <li>OOP, scripting & automation</li>
+          <li>Exception handling</li>
+          <li>File I/O</li>
+          <li>Modules & packages</li>
+        </ul>
+      </div>
+
+      <!-- Flask -->
+      <div
+        class="flex-shrink-0 w-48 bg-gray-800 rounded-lg p-4 flex flex-col justify-start items-center hover:scale-105 transition transform">
+        <img src="assets/flask.png" alt="Flask" class="w-16 h-16 mb-3">
+        <h3 class="text-xl font-semibold text-purple-400 mb-2">Flask</h3>
+        <ul class="text-gray-300 text-sm list-disc list-inside">
+          <li>MVC structure</li>
+          <li>Routing, GET/POST methods</li>
+          <li>Jinja Templating</li>
+          <li>Form handling & validation</li>
+          <li>Session management & Blueprints</li>
+          <li>Database integration</li>
+        </ul>
+      </div>
+
+      <!-- HTML & CSS -->
+      <div
+        class="flex-shrink-0 w-48 bg-gray-800 rounded-lg p-4 flex flex-col justify-start items-center hover:scale-105 transition transform">
+        <img src="assets/htmlcss.png" alt="HTML & CSS" class="w-16 h-16 mb-3">
+        <h3 class="text-xl font-semibold text-purple-400 mb-2">HTML & CSS</h3>
+        <ul class="text-gray-300 text-sm list-disc list-inside">
+          <li>Semantic HTML</li>
+          <li>Responsive Design</li>
+          <li>Bootstrap & TailwindCSS</li>
+        </ul>
+      </div>
+
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-20 px-8 bg-slate-900">
-    <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <a href="https://github.com" class="project-card glightbox" data-glightbox="title: My Project">
-        <h3 class="text-xl font-bold mb-2">Project 1</h3>
-        <p>Some cool description of project 1.</p>
-      </a>
-      <a href="https://github.com" class="project-card glightbox" data-glightbox="title: My Project">
-        <h3 class="text-xl font-bold mb-2">Project 2</h3>
-        <p>Some cool description of project 2.</p>
-      </a>
-      <a href="https://github.com" class="project-card glightbox" data-glightbox="title: My Project">
-        <h3 class="text-xl font-bold mb-2">Project 3</h3>
-        <p>Some cool description of project 3.</p>
-      </a>
+  <!-- Soft Skills & Architecture Section -->
+  <section id="soft-skills"
+    class="min-h-screen px-6 md:px-12 py-16 flex flex-col justify-center relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-8 font-[Lora] text-purple-400">Soft Skills & Architecture</h2>
+
+    <div class="flex gap-6 overflow-x-auto py-6 scrollbar-hide">
+
+      <!-- MVC & Architecture -->
+      <div
+        class="flex-shrink-0 w-48 bg-gray-800 rounded-lg p-4 flex flex-col justify-start items-center hover:scale-105 transition transform">
+        <img src="assets/mvc.png" alt="MVC" class="w-16 h-16 mb-3">
+        <h3 class="text-xl font-semibold text-purple-400 mb-2">MVC / Architecture</h3>
+        <ul class="text-gray-300 text-sm list-disc list-inside">
+          <li>Architecture design</li>
+          <li>Routing</li>
+          <li>Controllers & Views</li>
+          <li>Separation of concerns</li>
+        </ul>
+      </div>
+
+      <!-- Soft Skills -->
+      <div
+        class="flex-shrink-0 w-48 bg-gray-800 rounded-lg p-4 flex flex-col justify-start items-center hover:scale-105 transition transform">
+        <img src="assets/arch.png" alt="Soft Skills" class="w-16 h-16 mb-3">
+        <h3 class="text-xl font-semibold text-purple-400 mb-2">Soft Skills</h3>
+        <ul class="text-gray-300 text-sm list-disc list-inside">
+          <li>SoC Principle & Dependency Injection</li>
+          <li>Layered Architecture</li>
+          <li>Onion / Clean Architecture</li>
+          <li>Technology & Intent-Driven Architecture</li>
+        </ul>
+      </div>
+
+      <!-- OS -->
+      <div
+        class="flex-shrink-0 w-48 bg-gray-800 rounded-lg p-4 flex flex-col justify-start items-center hover:scale-105 transition transform">
+        <img src="assets/os.png" alt="OS" class="w-16 h-16 mb-3">
+        <h3 class="text-xl font-semibold text-purple-400 mb-2">Operating Systems</h3>
+        <ul class="text-gray-300 text-sm list-disc list-inside">
+          <li>Windows</li>
+          <li>Linux Arch</li>
+          <li>Linux Ubuntu</li>
+        </ul>
+      </div>
+
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-20 px-8">
-    <h2 class="text-3xl font-bold mb-8 text-center">Contact Me</h2>
-    <form class="max-w-xl mx-auto flex flex-col gap-4">
-      <input type="text" placeholder="Your Name" class="p-3 rounded-md text-black">
-      <input type="email" placeholder="Your Email" class="p-3 rounded-md text-black">
-      <textarea placeholder="Message" class="p-3 rounded-md text-black"></textarea>
-      <button type="submit" class="bg-teal-500 p-3 rounded-md hover:bg-teal-600">Send</button>
-    </form>
+
+
+<!-- Projects Section -->
+<section id="projects" class="min-h-screen px-6 md:px-12 py-16 bg-gradient-to-b from-black via-gray-900 to-black">
+  <h2 class="text-4xl font-bold mb-8 font-[Lora] text-purple-400">Projects</h2>
+  <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Project cards will be injected here -->
+  </div>
+</section>
+
+<script>
+  // Fetch GitHub repositories
+  fetch('https://api.github.com/users/sipxi/repos')
+    .then(response => response.json())
+    .then(repos => {
+      const grid = document.getElementById('projects-grid');
+      repos.forEach((repo, index) => {
+        const card = document.createElement('div');
+        card.classList.add('bg-gray-800', 'p-6', 'rounded-lg', 'hover:scale-105', 'transition', 'transform', 'project-card');
+        card.innerHTML = `
+          <h3 class="text-2xl font-bold mb-2 font-[Lora]">${repo.name}</h3>
+          <p>${repo.description || 'No description available.'}</p>
+          <a href="${repo.html_url}" target="_blank" class="text-purple-400 mt-4 inline-block">View on GitHub</a>
+        `;
+        grid.appendChild(card);
+
+        // GSAP animation
+        gsap.from(card, {
+          opacity: 0,
+          y: 50,
+          duration: 1,
+          delay: index * 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 80%',
+          }
+        });
+      });
+    })
+    .catch(error => console.error('Error fetching GitHub repositories:', error));
+</script>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="min-h-screen px-6 md:px-12 py-16" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-6 font-[Lora] text-purple-400">Contact</h2>
+
+          Feel free to connect with me on <a href="https://github.com/Sipxi"
+        class="text-purple-400 underline hover:text-purple-500 transition">GitHub</a>
+      or via email: <a href="mailto:your.email@example.com"
+        class="text-purple-400 underline hover:text-purple-500 transition">
+        sipxi@email.cz
+      </a>
+
   </section>
+
+  <!-- Footer -->
+  <footer class="p-6 text-center text-gray-400">
+    © 2025 Sipxi. All rights reserved.
+  </footer>
 
   <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="script.js"></script>
+
   <script>
-    // Typed.js
-    const typed = new Typed('#typed', {
-      strings: ['Fullstack Developer', 'C# Enthusiast', 'Python Wizard', 'Web Creator'],
-      typeSpeed: 50,
-      backSpeed: 25,
-      loop: true
-    });
-
-    // Anime.js Logo
-    anime({
-      targets: '#logo',
-      scale: [0.8, 1],
-      opacity: [0, 1],
-      duration: 1500,
-      easing: 'easeOutElastic(1, .8)'
-    });
-
-    // ScrollReveal
-    ScrollReveal().reveal('.sr-item', { 
-      distance: '50px', 
-      duration: 1000, 
-      easing: 'ease-in-out', 
-      origin: 'bottom',
-      interval: 200
-    });
-
-    // Particles.js
-    tsParticles.load("particles-js", {
-      particles: {
-        number: { value: 80 },
-        size: { value: 3 },
-        move: { enable: true, speed: 1 },
-        line_linked: { enable: true, distance: 150, color: "#00ffff", opacity: 0.4 }
-      }
-    });
-
-    // GLightbox
-    const lightbox = GLightbox({});
+    AOS.init();
+    particlesJS.load('particles-js', 'assets/particles.json', function () { console.log('Particles loaded'); });
   </script>
 </body>
+
 </html>

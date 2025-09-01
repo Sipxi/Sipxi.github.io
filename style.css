@@ -1,0 +1,31 @@
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Navbar links container shadow */
+nav {
+  box-shadow: 0 2px 6px rgba(168, 85, 247, 0.3);
+}
+
+/* Hero text shadows */
+h2 {
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+}
+
+p {
+  text-shadow: 0 0 4px rgba(168, 85, 247, 0.15);
+}
+
+/* Hover glow for links */
+a:hover {
+  color: #c4b5fd;
+  text-decoration: none;
+}
+
+/* Projects hover */
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+body {
+  font-family: 'Lora', serif;
+}
