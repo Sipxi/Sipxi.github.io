@@ -32,3 +32,7 @@ body {
 }
 
 
+
+[id] {
+  scroll-margin-top: 80px; /* height of your fixed header */
+}

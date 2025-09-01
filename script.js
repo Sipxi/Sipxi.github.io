@@ -1,6 +1,23 @@
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+let menuOpen = false;
 
+// Create a GSAP timeline for smooth dropdown
+const menuTimeline = gsap.timeline({ paused: true })
+  .to(mobileMenu, { height: "auto", opacity: 1, duration: 0.4, ease: "power3.out" });
 
-
+menuBtn.addEventListener("click", () => {
+  if (!menuOpen) {
+    gsap.set(mobileMenu, { display: "block", height: 0, opacity: 0 });
+    menuTimeline.play();
+    menuOpen = true;
+  } else {
+    menuTimeline.reverse().eventCallback("onReverseComplete", () => {
+      gsap.set(mobileMenu, { display: "none" });
+    });
+    menuOpen = false;
+  }
+});
 
 // -----------------------------
 // Hero Section Animations
