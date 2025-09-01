@@ -1,22 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sipxi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sipxi Portfolio</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.0/gsap.min.js"></script>
+  
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.6.1/tsparticles.min.js"></script>
+  
+  <!-- GLightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px;
-      background: #f5f5f5;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #f1f5f9;
     }
-    h1 {
-      color: #007acc;
+    #hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card {
+      background-color: #1e293b;
+      padding: 1rem;
+      border-radius: 1rem;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+    #particles-js {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
   </style>
 </head>
 <body>
-  <h1>Hello! I'm Sipxi! 😎</h1>
-  <p>This is hosted for free on GitHub Pages.</p>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div id="particles-js"></div>
+    <h1 id="logo" class="text-5xl font-bold mb-4">Sipxi</h1>
+    <span id="typed" class="text-xl text-teal-400"></span>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="py-20 px-8">
+    <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
+    <div class="max-w-4xl mx-auto space-y-6">
+      <p class="sr-item">I am a student passionate about programming, C#, Python, and creating cool web stuff.</p>
+      <p class="sr-item">I enjoy making interactive portfolios and learning new technologies to push my skills further.</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 px-8 bg-slate-900">
+    <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <a href="https://github.com" class="project-card glightbox" data-glightbox="title: My Project">
+        <h3 class="text-xl font-bold mb-2">Project 1</h3>
+        <p>Some cool description of project 1.</p>
+      </a>
+      <a href="https://github.com" class="project-card glightbox" data-glightbox="title: My Project">
+        <h3 class="text-xl font-bold mb-2">Project 2</h3>
+        <p>Some cool description of project 2.</p>
+      </a>
+      <a href="https://github.com" class="project-card glightbox" data-glightbox="title: My Project">
+        <h3 class="text-xl font-bold mb-2">Project 3</h3>
+        <p>Some cool description of project 3.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-8">
+    <h2 class="text-3xl font-bold mb-8 text-center">Contact Me</h2>
+    <form class="max-w-xl mx-auto flex flex-col gap-4">
+      <input type="text" placeholder="Your Name" class="p-3 rounded-md text-black">
+      <input type="email" placeholder="Your Email" class="p-3 rounded-md text-black">
+      <textarea placeholder="Message" class="p-3 rounded-md text-black"></textarea>
+      <button type="submit" class="bg-teal-500 p-3 rounded-md hover:bg-teal-600">Send</button>
+    </form>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    // Typed.js
+    const typed = new Typed('#typed', {
+      strings: ['Fullstack Developer', 'C# Enthusiast', 'Python Wizard', 'Web Creator'],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
+    });
+
+    // Anime.js Logo
+    anime({
+      targets: '#logo',
+      scale: [0.8, 1],
+      opacity: [0, 1],
+      duration: 1500,
+      easing: 'easeOutElastic(1, .8)'
+    });
+
+    // ScrollReveal
+    ScrollReveal().reveal('.sr-item', { 
+      distance: '50px', 
+      duration: 1000, 
+      easing: 'ease-in-out', 
+      origin: 'bottom',
+      interval: 200
+    });
+
+    // Particles.js
+    tsParticles.load("particles-js", {
+      particles: {
+        number: { value: 80 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1 },
+        line_linked: { enable: true, distance: 150, color: "#00ffff", opacity: 0.4 }
+      }
+    });
+
+    // GLightbox
+    const lightbox = GLightbox({});
+  </script>
 </body>
 </html>
