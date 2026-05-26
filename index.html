@@ -1,444 +1,598 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio of Serhij Čepil — Python Developer, Instructor & Creative Technologist based in Brno, Czech Republic"/>
-  <meta name="author" content="Serhij Čepil"/>
-  <meta property="og:title" content="Serhij Čepil — Portfolio"/>
-  <meta property="og:description" content="Python Developer, Instructor & Creative Technologist"/>
-  <meta property="og:type" content="website"/>
-  <title>Serhij Čepil — Portfolio</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
-  
-  <!-- Google Fonts for lo-fi aesthetic -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  
-  <!-- External Stylesheet -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- ===== HEADER & NAVIGATION ===== -->
-  <header>
-    <div class="container header-content">
-      <div class="logo">Serhij Čepil</div>
-      <button class="mobile-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
-      <nav>
-        <ul id="navMenu">
-          <li><a href="#summary">Summary</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Serhij Čepil — Python Developer, Instructor & Creative Technologist based in Brno, Czech Republic"
+    />
+    <meta name="author" content="Serhij Čepil" />
+    <meta property="og:title" content="Serhij Čepil — Portfolio" />
+    <meta
+      property="og:description"
+      content="Python Developer, Instructor & Creative Technologist"
+    />
+    <meta property="og:type" content="website" />
+    <title>Serhij Čepil — Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/icon.png" />
 
-  <main>
-    <!-- ===== HERO / PROFESSIONAL SUMMARY ===== -->
-    <section id="summary" class="hero">
-      <div class="container">
-        <h1 class="hero-name">Serhij Čepil</h1>
-        <p class="hero-title">Software Engineer Enthusiast</p>
-        <p class="hero-summary">
-          Passionate about building elegant software, teaching the next generation of developers, and solving real-world problems with code. Based in Brno, Czech Republic, with experience spanning full-stack development, NLP, education technology, and creative automation.
-        </p>
-        <div class="contact-links">
-          <a href="mailto:serhij.cepil@seznam.cz" class="contact-btn">✉️ Email Me</a>
-          <a href="https://github.com/sipxi" target="_blank" rel="noopener" class="contact-btn secondary">GitHub</a>
-          <a href="https://linkedin.com/in/sipxi/" target="_blank" rel="noopener" class="contact-btn secondary">LinkedIn</a>
-        </div>
-      </div>
-    </section>
+    <!-- Google Fonts for lo-fi aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- ===== TECHNICAL SKILLS ===== -->
-    <section id="skills">
-      <div class="container">
-        <div class="section-title">
-          <h2>Technical Skills</h2>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Programming Languages</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">SQL</span>
-              <span class="skill-tag">C#</span>
-              <span class="skill-tag">C</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Frameworks & Libraries</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Flask</span>
-              <span class="skill-tag">FastAPI</span>
-              <span class="skill-tag">ASP.NET Core</span>
-              <span class="skill-tag">.NET</span>
-              <span class="skill-tag">asyncio</span>
-              <span class="skill-tag">Tailwind CSS</span>
-              <span class="skill-tag">Discord.py</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Tools & DevOps</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Git</span>
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">Azure DevOps</span>
-              <span class="skill-tag">VS Code</span>
-              <span class="skill-tag">Visual Studio</span>
-              <span class="skill-tag">JetBrains IDEs</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Systems & Concepts</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Linux (Ubuntu, Arch)</span>
-              <span class="skill-tag">Windows</span>
-              <span class="skill-tag">MVC Architecture</span>
-              <span class="skill-tag">REST APIs</span>
-              <span class="skill-tag">NLP/Transformers</span>
-              <span class="skill-tag">Async Programming</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== WORK EXPERIENCE ===== -->
-    <section id="experience" class="bg-warm">
-      <div class="container">
-        <div class="section-title">
-          <h2>Work Experience</h2>
-        </div>
-        <div class="experience-list">
-          
-          <!-- Role 1 -->
-          <article class="role-card">
-            <header class="role-header">
-              <div>
-                <h3 class="role-title">Python & Flask Lecturer (Part-time)</h3>
-                <p class="role-company">Orange Academy • Brno, Online</p>
-              </div>
-              <time class="role-date">Jun 2025 – Present</time>
-            </header>
-            <div class="role-content">
-              <p>Lead instructor for 12-week web development programs using Python and Flask.</p>
-              <ul>
-                <li>Achieved 95% final project completion rate across classes of 10+ students</li>
-                <li>Taught Flask framework, MVC architecture, routing, templating, and database integration</li>
-                <li>Guided students through frontend fundamentals: HTML, CSS, JavaScript, AJAX, and responsive design</li>
-                <li>Mentored learners on independent projects and technical problem-solving</li>
-              </ul>
-            </div>
-          </article>
-          
-          <!-- Role 2 -->
-          <article class="role-card">
-            <header class="role-header">
-              <div>
-                <h3 class="role-title">Mentor & Course Creator</h3>
-                <p class="role-company">Bridge Academy • Brno, Online</p>
-              </div>
-              <time class="role-date">Apr 2021 – Jul 2025</time>
-            </header>
-            <div class="role-content">
-              <p>Designed and delivered engaging programming education for young learners.</p>
-              <ul>
-                <li>Mentored 100+ children in virtual lessons and summer camps using Minecraft-based mechanics</li>
-                <li>Created an innovative 13-week course introducing AI fundamentals to beginners</li>
-                <li>Managed a team of instructors and coordinated educational content development</li>
-              </ul>
-            </div>
-          </article>
-          
-          <!-- Role 3 -->
-          <article class="role-card">
-            <header class="role-header">
-              <div>
-                <h3 class="role-title">Service Technician (Seasonal)</h3>
-                <p class="role-company">Plant Control • Brno, Czech Republic</p>
-              </div>
-              <time class="role-date">Jan 2023 – Sep 2025</time>
-            </header>
-            <div class="role-content">
-              <p>Hands-on hardware maintenance and installation for automated irrigation systems.</p>
-              <ul>
-                <li>Performed regular maintenance on 10+ automatic irrigation units</li>
-                <li>Assembled and installed new systems for 5+ residential and commercial clients</li>
-                <li>Configured and calibrated hardware sensors and controllers for optimal performance</li>
-              </ul>
-            </div>
-          </article>
-          
-          <!-- Role 4 -->
-          <article class="role-card">
-            <header class="role-header">
-              <div>
-                <h3 class="role-title">Discord Bot Developer (Internship)</h3>
-                <p class="role-company">Bridge Academy • Brno, Online</p>
-              </div>
-              <time class="role-date">Nov 2022 – Dec 2022</time>
-            </header>
-            <div class="role-content">
-              <p>Built automation tools to streamline community management.</p>
-              <ul>
-                <li>Developed a custom Discord bot using Python, Discord.py, and AsyncIO</li>
-                <li>Automated moderation workflows and user command handling</li>
-                <li>Reduced manual administrative overhead for community managers</li>
-              </ul>
-            </div>
-          </article>
-          
-          <!-- Role 5 -->
-          <article class="role-card">
-            <header class="role-header">
-              <div>
-                <h3 class="role-title">Web Designer (Internship)</h3>
-                <p class="role-company">Colman Grimes • Dublin, Ireland</p>
-              </div>
-              <time class="role-date">Nov 2021 – Dec 2021</time>
-            </header>
-            <div class="role-content">
-              <p>Designed and launched a responsive corporate website with measurable UX improvements.</p>
-              <ul>
-                <li>Built a responsive website using Webflow, increasing visitor retention by 15%</li>
-                <li>Redesigned navigation structure, reducing clicks to key information by 30%</li>
-                <li>Collaborated in a 4-person team on wireframes, UI layouts, and visual design</li>
-              </ul>
-            </div>
-          </article>
-          
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== EDUCATION ===== -->
-    <section id="education">
-      <div class="container">
-        <div class="section-title">
-          <h2>Education</h2>
-        </div>
-        <div class="education-list">
-          
-          <!-- Education 1 -->
-          <article class="edu-card">
-            <header class="edu-header">
-              <div>
-                <h3 class="edu-title">Bachelor's in Information Technology</h3>
-                <p class="edu-school">Brno University of Technology (FIT VUT)</p>
-              </div>
-              <time class="edu-date">2024 – Present (Exp. 2027)</time>
-            </header>
-            <div class="edu-content">
-              <p><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Database Systems, Software Engineering, Compiler Design, Asynchronous Programming, C# & .NET, AI Fundamentals</p>
-              <p><strong>Key Projects:</strong></p>
-              <ul>
-                <li>Engineered an object-oriented interpreter in Python processing XML-based ASTs with Dockerized end-to-end testing</li>
-                <li>Developed a full-stack ASP.NET Core application featuring API, web UI, and comprehensive test coverage</li>
-                <li>Implemented a custom interpreter for SOL26 (Smalltalk-inspired language) with parsing and execution engine</li>
-              </ul>
-            </div>
-          </article>
-          
-          <!-- Education 2 -->
-          <article class="edu-card">
-            <header class="edu-header">
-              <div>
-                <h3 class="edu-title">IT Programming & Databases</h3>
-                <p class="edu-school">Purkyňova High School</p>
-              </div>
-              <time class="edu-date">Graduated 2024</time>
-            </header>
-            <div class="edu-content">
-              <p><strong>Relevant Coursework:</strong> Python, SQL, Java, Database Fundamentals</p>
-              <p><strong>Final Project:</strong> Engineered a comprehensive Discord server administration tool in Python with role management, logging, and automation features.</p>
-            </div>
-          </article>
-          
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== PROJECTS & ACHIEVEMENTS ===== -->
-    <section id="projects" class="bg-warm">
-      <div class="container">
-        <div class="section-title">
-          <h2>Projects & Achievements</h2>
-        </div>
-        <div class="projects-grid">
-          <!-- Achievement 1 -->
-          <div class="project-card">
-            <div class="project-title">
-              <h3>DataSentics & NLP@FIT Hackathon</h3>
-              <span class="project-badge">🥉 3rd Place</span>
-            </div>
-            <div class="project-meta">
-              <span>Feb 2026</span>
-              <span>•</span>
-              <span>Brno, Czech Republic</span>
-            </div>
-            <p class="project-description">
-              Developed an automated NLP pipeline using LLMs and Transformer models to classify online news comments as subjective or objective for the FactDeMice project dataset.
-            </p>
-            <div class="project-tech">
-              <span class="tech-pill">Python</span>
-              <span class="tech-pill">Transformers</span>
-              <span class="tech-pill">NLP</span>
-              <span class="tech-pill">LLMs</span>
-            </div>
-          </div>
-          
-          <!-- Achievement 2 -->
-          <div class="project-card">
-            <div class="project-title">
-              <h3>Lakmoos 24H Hackathon</h3>
-              <span class="project-badge">Media Intelligence</span>
-            </div>
-            <div class="project-meta">
-              <span>Mar 2026</span>
-              <span>•</span>
-              <span>Brno, Czech Republic</span>
-            </div>
-            <p class="project-description">
-              Designed and implemented a scalable Python-based backend service for media intelligence. Applied NLP and ML techniques to collect media content, generate structured summaries, and extract analytical insights for current events.
-            </p>
-            <div class="project-tech">
-              <span class="tech-pill">Python</span>
-              <span class="tech-pill">FastAPI</span>
-              <span class="tech-pill">NLP</span>
-              <span class="tech-pill">ML</span>
-              <span class="tech-pill">Docker</span>
-            </div>
-          </div>
-          
-          <!-- Project 3 -->
-          <div class="project-card">
-            <div class="project-title">
-              <h3>Discord Admin Tool</h3>
-              <span class="project-badge">Final Project</span>
-            </div>
-            <div class="project-meta">
-              <span>2024</span>
-              <span>•</span>
-              <span>Personal</span>
-            </div>
-            <p class="project-description">
-              Created a comprehensive administration tool for Discord server management featuring role automation, audit logging, user management, and custom command workflows.
-            </p>
-            <div class="project-tech">
-              <span class="tech-pill">Python</span>
-              <span class="tech-pill">Discord.py</span>
-              <span class="tech-pill">AsyncIO</span>
-              <span class="tech-pill">SQLite</span>
-            </div>
-          </div>
-          
-          <!-- Project 4 -->
-          <div class="project-card">
-            <div class="project-title">
-              <h3>SOL26 Language Interpreter</h3>
-              <span class="project-badge">Academic</span>
-            </div>
-            <div class="project-meta">
-              <span>2025</span>
-              <span>•</span>
-              <span>FIT VUT</span>
-            </div>
-            <p class="project-description">
-              Implemented a custom interpreter for the SOL26 programming language (Smalltalk-inspired) in Python, including lexical analysis, parsing, execution engine, and core language features.
-            </p>
-            <div class="project-tech">
-              <span class="tech-pill">Python</span>
-              <span class="tech-pill">Parser Combinators</span>
-              <span class="tech-pill">OOP</span>
-              <span class="tech-pill">Testing</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT & ADDITIONAL INFO ===== -->
-    <section id="contact">
-      <div class="container">
-        <div class="section-title">
-          <h2>Get In Touch</h2>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-item">
-            <div class="contact-icon">✉️</div>
-            <span class="contact-value">serhij.cepil@seznam.cz</span>
-            <p>Preferred contact method</p>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">📍</div>
-            <span class="contact-value">Brno, Czech Republic</span>
-            <p>Open to remote & local opportunities</p>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">🌐</div>
-            <a href="https://github.com/sipxi" target="_blank" rel="noopener" class="contact-value">GitHub, click me!</a>
-            <a href="https://linkedin.com/in/sipxi/" target="_blank" rel="noopener" class="contact-value">LinkedIn, click me!</a>
-          </div>
-        </div>
-        
-        <div class="contact-extras">
-          <h3>Languages</h3>
-          <ul class="languages-list">
-            <li class="language-tag">Ukrainian (Native)</li>
-            <li class="language-tag">Russian (Native)</li>
-            <li class="language-tag">Czech (Full Professional)</li>
-            <li class="language-tag">English (Full Professional)</li>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
+    <header>
+      <div class="container header-content">
+        <div class="logo">Serhij Čepil</div>
+        <button
+          class="mobile-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+        <nav>
+          <ul id="navMenu">
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
-          <p class="contact-extras-note">
-            🚗 Driving License: Category B • 🎻 Interests: Fencing, Acoustic Music (Guitar, Piano)
-          </p>
-        </div>
+        </nav>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container">
-      <p>© <span id="year"></span> Serhij Čepil • Crafted with ☕</p>
-    </div>
-  </footer>
+    <main>
+      <!-- ===== HERO / PROFESSIONAL SUMMARY ===== -->
+      <section id="summary" class="hero">
+        <div class="container">
+          <div class="hero-profile">
+            <img
+              src="assets/icon.png"
+              alt="Serhij Čepil profile photo"
+              class="profile-img"
+              loading="lazy"
+            />
+            <h1 class="hero-name">Serhij Čepil</h1>
+          </div>
+          <p class="hero-title">Software Engineer Enthusiast</p>
+          <p class="hero-summary">
+            Passionate about building elegant software, teaching the next
+            generation of developers, and solving real-world problems with code.
+            Based in Brno, Czech Republic, with experience spanning full-stack
+            development, NLP, education technology, and creative automation.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:serhij.cepil@seznam.cz" class="contact-btn"
+              >✉️ Email Me</a
+            >
+            <a
+              href="https://github.com/sipxi"
+              target="_blank"
+              rel="noopener"
+              class="contact-btn secondary"
+              >GitHub</a
+            >
+            <a
+              href="https://linkedin.com/in/sipxi/"
+              target="_blank"
+              rel="noopener"
+              class="contact-btn secondary"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
 
-  <!-- ===== MINIMAL JAVASCRIPT ===== -->
-  <script>
-    // Mobile navigation toggle
-    document.getElementById('navToggle').addEventListener('click', function() {
-      document.getElementById('navMenu').classList.toggle('active');
-      this.textContent = document.getElementById('navMenu').classList.contains('active') ? '✕' : '☰';
-    });
-    
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('#navMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('navMenu').classList.remove('active');
-        document.getElementById('navToggle').textContent = '☰';
+      <!-- ===== TECHNICAL SKILLS ===== -->
+      <section id="skills">
+        <div class="container">
+          <div class="section-title">
+            <h2>Technical Skills</h2>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>Programming Languages</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">C</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Frameworks & Libraries</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">ASP.NET Core</span>
+                <span class="skill-tag">.NET</span>
+                <span class="skill-tag">asyncio</span>
+                <span class="skill-tag">Tailwind CSS</span>
+                <span class="skill-tag">Discord.py</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Tools & DevOps</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Azure DevOps</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">Visual Studio</span>
+                <span class="skill-tag">JetBrains IDEs</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Systems & Concepts</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Linux (Ubuntu, Arch)</span>
+                <span class="skill-tag">Windows</span>
+                <span class="skill-tag">MVC Architecture</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">NLP/Transformers</span>
+                <span class="skill-tag">Async Programming</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== WORK EXPERIENCE ===== -->
+      <section id="experience" class="bg-warm">
+        <div class="container">
+          <div class="section-title">
+            <h2>Work Experience</h2>
+          </div>
+          <div class="experience-list">
+            <!-- Role 1 -->
+            <article class="role-card">
+              <header class="role-header">
+                <div>
+                  <h3 class="role-title">
+                    Python & Flask Lecturer (Part-time)
+                  </h3>
+                  <p class="role-company">Orange Academy • Brno, Online</p>
+                </div>
+                <time class="role-date">Jun 2025 – Present</time>
+              </header>
+              <div class="role-content">
+                <p>
+                  Lead instructor for 12-week web development programs using
+                  Python and Flask.
+                </p>
+                <ul>
+                  <li>
+                    Achieved 95% final project completion rate across classes of
+                    10+ students
+                  </li>
+                  <li>
+                    Taught Flask framework, MVC architecture, routing,
+                    templating, and database integration
+                  </li>
+                  <li>
+                    Guided students through frontend fundamentals: HTML, CSS,
+                    JavaScript, AJAX, and responsive design
+                  </li>
+                  <li>
+                    Mentored learners on independent projects and technical
+                    problem-solving
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Role 2 -->
+            <article class="role-card">
+              <header class="role-header">
+                <div>
+                  <h3 class="role-title">Mentor & Course Creator</h3>
+                  <p class="role-company">Bridge Academy • Brno, Online</p>
+                </div>
+                <time class="role-date">Apr 2021 – Jul 2025</time>
+              </header>
+              <div class="role-content">
+                <p>
+                  Designed and delivered engaging programming education for
+                  young learners.
+                </p>
+                <ul>
+                  <li>
+                    Mentored 100+ children in virtual lessons and summer camps
+                    using Minecraft-based mechanics
+                  </li>
+                  <li>
+                    Created an innovative 13-week course introducing AI
+                    fundamentals to beginners
+                  </li>
+                  <li>
+                    Managed a team of instructors and coordinated educational
+                    content development
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Role 3 -->
+            <article class="role-card">
+              <header class="role-header">
+                <div>
+                  <h3 class="role-title">Service Technician (Seasonal)</h3>
+                  <p class="role-company">
+                    Plant Control • Brno, Czech Republic
+                  </p>
+                </div>
+                <time class="role-date">Jan 2023 – Sep 2025</time>
+              </header>
+              <div class="role-content">
+                <p>
+                  Hands-on hardware maintenance and installation for automated
+                  irrigation systems.
+                </p>
+                <ul>
+                  <li>
+                    Performed regular maintenance on 10+ automatic irrigation
+                    units
+                  </li>
+                  <li>
+                    Assembled and installed new systems for 5+ residential and
+                    commercial clients
+                  </li>
+                  <li>
+                    Configured and calibrated hardware sensors and controllers
+                    for optimal performance
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Role 4 -->
+            <article class="role-card">
+              <header class="role-header">
+                <div>
+                  <h3 class="role-title">Discord Bot Developer (Internship)</h3>
+                  <p class="role-company">Bridge Academy • Brno, Online</p>
+                </div>
+                <time class="role-date">Nov 2022 – Dec 2022</time>
+              </header>
+              <div class="role-content">
+                <p>
+                  Built automation tools to streamline community management.
+                </p>
+                <ul>
+                  <li>
+                    Developed a custom Discord bot using Python, Discord.py, and
+                    AsyncIO
+                  </li>
+                  <li>
+                    Automated moderation workflows and user command handling
+                  </li>
+                  <li>
+                    Reduced manual administrative overhead for community
+                    managers
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Role 5 -->
+            <article class="role-card">
+              <header class="role-header">
+                <div>
+                  <h3 class="role-title">Web Designer (Internship)</h3>
+                  <p class="role-company">Colman Grimes • Dublin, Ireland</p>
+                </div>
+                <time class="role-date">Nov 2021 – Dec 2021</time>
+              </header>
+              <div class="role-content">
+                <p>
+                  Designed and launched a responsive corporate website with
+                  measurable UX improvements.
+                </p>
+                <ul>
+                  <li>
+                    Built a responsive website using Webflow, increasing visitor
+                    retention by 15%
+                  </li>
+                  <li>
+                    Redesigned navigation structure, reducing clicks to key
+                    information by 30%
+                  </li>
+                  <li>
+                    Collaborated in a 4-person team on wireframes, UI layouts,
+                    and visual design
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EDUCATION ===== -->
+      <section id="education">
+        <div class="container">
+          <div class="section-title">
+            <h2>Education</h2>
+          </div>
+          <div class="education-list">
+            <!-- Education 1 -->
+            <article class="edu-card">
+              <header class="edu-header">
+                <div>
+                  <h3 class="edu-title">
+                    Bachelor's in Information Technology
+                  </h3>
+                  <p class="edu-school">
+                    Brno University of Technology (FIT VUT)
+                  </p>
+                </div>
+                <time class="edu-date">2024 – Present (Exp. 2027)</time>
+              </header>
+              <div class="edu-content">
+                <p>
+                  <strong>Relevant Coursework:</strong> Data Structures &
+                  Algorithms, Database Systems, Software Engineering, Compiler
+                  Design, Asynchronous Programming, C# & .NET, AI Fundamentals
+                </p>
+                <p><strong>Key Projects:</strong></p>
+                <ul>
+                  <li>
+                    Engineered an object-oriented interpreter in Python
+                    processing XML-based ASTs with Dockerized end-to-end testing
+                  </li>
+                  <li>
+                    Developed a full-stack ASP.NET Core application featuring
+                    API, web UI, and comprehensive test coverage
+                  </li>
+                  <li>
+                    Implemented a custom interpreter for SOL26
+                    (Smalltalk-inspired language) with parsing and execution
+                    engine
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Education 2 -->
+            <article class="edu-card">
+              <header class="edu-header">
+                <div>
+                  <h3 class="edu-title">IT Programming & Databases</h3>
+                  <p class="edu-school">Purkyňova High School</p>
+                </div>
+                <time class="edu-date">Graduated 2024</time>
+              </header>
+              <div class="edu-content">
+                <p>
+                  <strong>Relevant Coursework:</strong> Python, SQL, Java,
+                  Database Fundamentals
+                </p>
+                <p>
+                  <strong>Final Project:</strong> Engineered a comprehensive
+                  Discord server administration tool in Python with role
+                  management, logging, and automation features.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS & ACHIEVEMENTS ===== -->
+      <section id="projects" class="bg-warm">
+        <div class="container">
+          <div class="section-title">
+            <h2>Projects & Achievements</h2>
+          </div>
+          <div class="projects-grid">
+            <!-- Achievement 1 -->
+            <div class="project-card">
+              <div class="project-title">
+                <h3>DataSentics & NLP@FIT Hackathon</h3>
+                <span class="project-badge">🥉 3rd Place</span>
+              </div>
+              <div class="project-meta">
+                <span>Feb 2026</span>
+                <span>•</span>
+                <span>Brno, Czech Republic</span>
+              </div>
+              <p class="project-description">
+                Developed an automated NLP pipeline using LLMs and Transformer
+                models to classify online news comments as subjective or
+                objective for the FactDeMice project dataset.
+              </p>
+              <div class="project-tech">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Transformers</span>
+                <span class="tech-pill">NLP</span>
+                <span class="tech-pill">LLMs</span>
+              </div>
+            </div>
+
+            <!-- Achievement 2 -->
+            <div class="project-card">
+              <div class="project-title">
+                <h3>Lakmoos 24H Hackathon</h3>
+                <span class="project-badge">Media Intelligence</span>
+              </div>
+              <div class="project-meta">
+                <span>Mar 2026</span>
+                <span>•</span>
+                <span>Brno, Czech Republic</span>
+              </div>
+              <p class="project-description">
+                Designed and implemented a scalable Python-based backend service
+                for media intelligence. Applied NLP and ML techniques to collect
+                media content, generate structured summaries, and extract
+                analytical insights for current events.
+              </p>
+              <div class="project-tech">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">FastAPI</span>
+                <span class="tech-pill">NLP</span>
+                <span class="tech-pill">ML</span>
+                <span class="tech-pill">Docker</span>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+              <div class="project-title">
+                <h3>Discord Admin Tool</h3>
+                <span class="project-badge">Final Project</span>
+              </div>
+              <div class="project-meta">
+                <span>2024</span>
+                <span>•</span>
+                <span>Personal</span>
+              </div>
+              <p class="project-description">
+                Created a comprehensive administration tool for Discord server
+                management featuring role automation, audit logging, user
+                management, and custom command workflows.
+              </p>
+              <div class="project-tech">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Discord.py</span>
+                <span class="tech-pill">AsyncIO</span>
+                <span class="tech-pill">SQLite</span>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+              <div class="project-title">
+                <h3>SOL26 Language Interpreter</h3>
+                <span class="project-badge">Academic</span>
+              </div>
+              <div class="project-meta">
+                <span>2025</span>
+                <span>•</span>
+                <span>FIT VUT</span>
+              </div>
+              <p class="project-description">
+                Implemented a custom interpreter for the SOL26 programming
+                language (Smalltalk-inspired) in Python, including lexical
+                analysis, parsing, execution engine, and core language features.
+              </p>
+              <div class="project-tech">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Parser Combinators</span>
+                <span class="tech-pill">OOP</span>
+                <span class="tech-pill">Testing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT & ADDITIONAL INFO ===== -->
+      <section id="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Get In Touch</h2>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <span class="contact-value">serhij.cepil@seznam.cz</span>
+              <p>Preferred contact method</p>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <span class="contact-value">Brno, Czech Republic</span>
+              <p>Open to remote & local opportunities</p>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🌐</div>
+              <a
+                href="https://github.com/sipxi"
+                target="_blank"
+                rel="noopener"
+                class="contact-value"
+                >GitHub, click me!</a
+              >
+              <a
+                href="https://linkedin.com/in/sipxi/"
+                target="_blank"
+                rel="noopener"
+                class="contact-value"
+                >LinkedIn, click me!</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-extras">
+            <h3>Languages</h3>
+            <ul class="languages-list">
+              <li class="language-tag">Ukrainian (Native)</li>
+              <li class="language-tag">Russian (Native)</li>
+              <li class="language-tag">Czech (Full Professional)</li>
+              <li class="language-tag">English (Full Professional)</li>
+            </ul>
+            <p class="contact-extras-note">
+              🚗 Driving License: Category B • 🎻 Interests: Fencing, Acoustic
+              Music (Guitar, Piano)
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> Serhij Čepil • Crafted with ☕</p>
+      </div>
+    </footer>
+
+    <!-- ===== MINIMAL JAVASCRIPT ===== -->
+    <script>
+      // Mobile navigation toggle
+      document
+        .getElementById("navToggle")
+        .addEventListener("click", function () {
+          document.getElementById("navMenu").classList.toggle("active");
+          this.textContent = document
+            .getElementById("navMenu")
+            .classList.contains("active")
+            ? "✕"
+            : "☰";
+        });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll("#navMenu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.getElementById("navMenu").classList.remove("active");
+          document.getElementById("navToggle").textContent = "☰";
+        });
       });
-    });
-    
-    // Dynamic year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-    
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+
+      // Dynamic year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
