@@ -1,4 +1,4 @@
-# Serhij Čepil — Personal Portfolio
+# Serhij Čepil - Personal Portfolio
 
 > Source code for [sipxi.me](https://sipxi.me) — a personal developer portfolio built with plain HTML & CSS, deployed via GitHub Pages.
 
@@ -16,7 +16,7 @@ A clean, responsive single-page portfolio showcasing my background as a Software
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Sipxi.github.io/
